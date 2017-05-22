@@ -1,3 +1,5 @@
-module.exports = () => ({
-  greeting: 'hello world',
-})
+const dogBathroomButton = () => {
+  return 'hello world'
+}
+
+module.exports = dogBathroomButton

@@ -2,14 +2,12 @@
   "name": "dog-bathroom-button",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec micro",
+    "dev": "nodemon index.js",
     "test:watch": "yarn test -- --watch",
     "verify": "yarn test && yarn lint",
     "test": "jest .",
     "lint": "eslint .",
-    "stage": "git checkout master && git pull && now",
-    "release": "now alias",
-    "start": "micro"
+    "start": "node index.js"
   },
   "jest": {
     "testEnvironment": "node"
@@ -26,17 +24,10 @@
       "sourceType": "module"
     }
   },
-  "now": {
-    "alias": "dog-bathroom-button"
-  },
   "devDependencies": {
     "eslint": "^3.19.0",
     "jest": "^20.0.3",
-    "node-fetch": "^1.6.3",
-    "nodemon": "^1.11.0",
-    "now": "^5.3.3"
+    "nodemon": "^1.11.0"
   },
-  "dependencies": {
-    "micro": "^7.3.3"
-  }
+  "dependencies": {}
 }

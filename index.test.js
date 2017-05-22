@@ -1,7 +1,5 @@
-const fetch = require('node-fetch')
+const dogBathroomButton = require('.')
 
-test('responds with hello world', async () => {
-  const response = await fetch('http://localhost:3000')
-  const json = await response.json()
-  expect(json.greeting).toEqual('hello world')
+test('hello world', () => {
+  expect(dogBathroomButton()).toBe('hello world')
 })
