@@ -5,5 +5,5 @@
 - Run `npm run dev` to develop
 - Run `npm run test:watch` to update tests
 - Submit a pull request to `master`
-- Continuous Integration runs `yarn verify` to ensure things are working as expected
+- Continuous Integration runs `npm run verify` to ensure things are working as expected
 - An admin merges your pull request into `master` and releases a new version
