@@ -3,21 +3,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "test:watch": "npm test -- --watch",
-    "verify": "npm test && npm run lint",
-    "test": "jest .",
+    "verify": "npm run lint",
     "lint": "eslint .",
     "start": "node index.js"
-  },
-  "jest": {
-    "testEnvironment": "node"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
     "env": {
       "es6": true,
-      "node": true,
-      "jest": true
+      "node": true
     },
     "parserOptions": {
       "ecmaVersion": 2017,
@@ -26,8 +20,9 @@
   },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "jest": "^20.0.3",
     "nodemon": "^1.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "onoff": "^1.1.2"
+  }
 }

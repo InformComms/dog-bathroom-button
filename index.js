@@ -1,5 +1,15 @@
-const dogBathroomButton = () => {
-  return 'hello world'
-}
+const Gpio = require('onoff').Gpio
 
-module.exports = dogBathroomButton
+const button = new Gpio(3, 'in', 'falling')
+console.log(button) 
+
+button.watch((err) => {
+  if (err) {
+    throw err
+  }
+  console.log('hit')
+})
+
+process.on('SIGINT', () => {
+  button.unexport()
+})
